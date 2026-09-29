@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Buddy Body · Every Body Training</title>
+<meta name="description" content="Lose weight, move more and feel better at home in 12 weeks. No injections. No pills. No gym. With rice. ₱499.">
+<meta name="theme-color" content="#080B10">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tomoncupa.github.io/home-buddy-body/">
+<meta property="og:title" content="Home Buddy Body · Every Body Training">
+<meta property="og:description" content="No injections. No pills. No gym. With rice. The 12-week home plan, ₱499.">
+<meta property="og:image" content="https://tomoncupa.github.io/home-buddy-body/assets/product-mockup.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script>
+/* ============ SETTINGS: EDIT THESE ============ */
+window.HB = {
+  PRICE: 499,
+  // Phase 1 (manual GCash). The GCash steps stay hidden, and the page says "Payment opens soon",
+  // until GCASH_NUMBER and KIT_PAID_FORM_ID are both filled in.
+  GCASH_NAME: "",                            // your GCash account name, exactly as it shows in the app
+  GCASH_NUMBER: "",                          // e.g. "0917 123 4567"
+  GCASH_QR: "assets/gcash-qr.png",          // GCash app: save your QR code image, name it gcash-qr.png, put it in assets/
+  // Second option: your UnionBank QR (QR Ph). Buyers can scan it with most bank and e-wallet apps. Leave "" to hide.
+  BANK_QR: "assets/unionbank-qr.png",       // UnionBank app: save your QR, name it unionbank-qr.png, put it in assets/
+  BANK_LABEL: "UnionBank QR (scan with Maya, BPI, BDO or any bank app)",
+  // Where buyers message you: your Every Body Training Page's m.me link. Empty hides the Messenger links.
+  MESSENGER_URL: "",
+  // Kit form that receives "I paid" submissions. Tag it paid-pending in Kit.
+  KIT_PAID_FORM_ID: "",                      // e.g. "7654321"
+  KIT_FORM_BASE: "https://app.kit.com/forms/", // if submissions fail, try "https://app.convertkit.com/forms/"
+  // Phase 2 (automatic). Paste a HitPay / PayMongo product link here and the page switches to one-tap checkout.
+  CHECKOUT_URL: "",
+  // Card / PayPal option. Paste your Gumroad product link here. Leave "" to hide.
+  GUMROAD_URL: "",
+  // The free calculator, shown while payment is not open yet.
+  CALC_URL: "https://tomoncupa.github.io/Automagic-Calculator/",
+  META_PIXEL_ID: "",
+  // Set to false if Meta rejects your ads because of the before/after photo on this page.
+  SHOW_BEFORE_AFTER: true,
+  DELIVERY_PROMISE: "I check payments every morning and evening. Your book and your Home Screen code arrive by email within 12 hours, usually much sooner."
+};
+/* ============================================= */
+</script>
+<script>
+if (window.HB.META_PIXEL_ID) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', window.HB.META_PIXEL_ID); fbq('track', 'PageView'); fbq('track', 'ViewContent', {content_name:'Home Buddy Body', value:499, currency:'PHP'});
+}
+function px(ev, data){ try{ if(window.fbq) fbq('track', ev, data||{}); }catch(e){} }
+</script>
+<style>
+/* Block, the Motherbase default skin (Motherbase/shared/skins.json, first entry).
+   Dark only, flat, hairline borders, 6px corners, 44px targets,
+   Chakra Petch for headings and numbers, IBM Plex Sans for reading. */
+:root{
+  color-scheme:dark;
+  --bg:#080B10; --surface-1:#0E141D; --surface-2:#131B26; --surface-3:#1B2634;
+  --border:#1E2A38; --border-strong:#2B3A4D;
+  --text-1:#DBE7F0; --text-2:#B8C9D8; --text-muted:#7F93A8;
+  --accent:#F0B323; --accent-fg:#080B10; --accent-soft:rgba(240,179,35,.13);
+  --success:#6EE7A8; --success-soft:rgba(110,231,168,.09);
+  --danger:#FF6B81;
+  /* one colour per pillar, from Block's ramp */
+  --p-food:#FFB347; --p-move:#F0B323; --p-rest:#7EE8FA; --p-prog:#6EE7A8; --p-tools:#A78BFA;
+  --cut:6px; --tap:44px; --track-cap:.08em;
+  --font-display:'Chakra Petch',system-ui,sans-serif;
+  --font-body:'IBM Plex Sans',system-ui,sans-serif;
+  --fast:120ms; --ease:cubic-bezier(.2,0,0,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;font-family:var(--font-body);color:var(--text-1);background:var(--bg);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+.wide{max-width:1040px}
+section{padding:52px 0;border-bottom:1px solid var(--border)}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.1;margin:0 0 14px;text-wrap:balance}
+h1{font-size:clamp(34px,8.6vw,56px);text-transform:uppercase;letter-spacing:.01em}
+h1 span{display:block;color:var(--accent)}
+h2{font-size:clamp(26px,5.8vw,36px);letter-spacing:.01em}
+h3{font-size:19px;letter-spacing:.02em}
+p{margin:0 0 14px}
+.cap{font-family:var(--font-display);font-size:12px;letter-spacing:var(--track-cap);text-transform:uppercase;font-weight:600;color:var(--accent);margin:0 0 10px}
+.muted{color:var(--text-muted)}
+.small{font-size:15px}
+.text-2{color:var(--text-2)}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;width:100%;max-width:440px;background:var(--accent);color:var(--accent-fg);
+  font-family:var(--font-display);font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  border:1px solid var(--accent);border-radius:var(--cut);padding:12px 22px;cursor:pointer;transition:filter var(--fast) var(--ease)}
+.cta:hover{filter:brightness(1.08)}
+.cta[disabled]{opacity:.55;cursor:progress}
+.cta.ghost{background:var(--surface-2);color:var(--text-1);border-color:var(--border-strong)}
+.btn-sub{font-size:14px;color:var(--text-muted);margin-top:12px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- top bar, as Motherbase headers ---------- */
+header.bar{background:var(--surface-1);border-bottom:1px solid var(--border)}
+.bar-in{max-width:1040px;margin:0 auto;padding:8px 16px;min-height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brandmark{font-family:var(--font-display);font-weight:700;letter-spacing:var(--track-cap);text-transform:uppercase;font-size:14px;line-height:1.2}
+.brandmark span{display:block;font-family:var(--font-body);font-weight:400;letter-spacing:0;text-transform:none;font-size:12px;color:var(--text-muted)}
+.navbuy{display:inline-flex;align-items:center;min-height:var(--tap);padding:0 14px;border:1px solid var(--accent);border-radius:var(--cut);color:var(--accent);
+  background:var(--accent-soft);font-family:var(--font-display);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{padding:38px 0 44px}
+.hero-grid{display:grid;gap:28px}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:center}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{display:inline-flex;align-items:center;min-height:30px;font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:var(--track-cap);
+  text-transform:uppercase;padding:4px 10px;border-radius:var(--cut);border:1px solid var(--accent);color:var(--accent)}
+.hero .lead{font-size:18.5px;color:var(--text-2)}
+.price-tag{display:flex;align-items:baseline;gap:12px;margin:20px 0 16px;flex-wrap:wrap}
+.price-tag b{font-family:var(--font-display);font-size:46px;font-weight:600;color:var(--accent);line-height:1}
+.price-tag span{font-size:15px;color:var(--text-2)}
+.hero-mock{max-width:520px;margin:0 auto;width:100%}
+
+/* ---------- strip of numbers, as Automagic tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--cut);overflow:hidden}
+@media(max-width:560px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{background:var(--surface-1);padding:16px 16px 14px;display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--font-display);font-size:30px;font-weight:600;line-height:1.05;color:var(--text-1)}
+.tile span{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:var(--track-cap);text-transform:uppercase;color:var(--text-muted)}
+.strip{padding:0 0 44px;border-bottom:1px solid var(--border)}
+
+/* ---------- lists ---------- */
+ul.ticks{list-style:none;padding:0;margin:0 0 18px}
+ul.ticks li{position:relative;padding:12px 0 12px 40px;border-bottom:1px solid var(--border);color:var(--text-2)}
+ul.ticks li:last-child{border-bottom:0}
+ul.ticks li b{color:var(--text-1);font-weight:600}
+ul.ticks li:before{content:"✓";position:absolute;left:0;top:13px;width:26px;height:26px;border-radius:var(--cut);background:var(--accent-soft);color:var(--accent);
+  border:1px solid rgba(240,179,35,.4);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+ul.x li:before{content:"✕";background:var(--surface-2);color:var(--text-muted);border-color:var(--border-strong)}
+
+/* ---------- panels ---------- */
+.cards{display:grid;gap:12px}
+@media(min-width:720px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--cut);padding:20px}
+.card.pl{border-top:3px solid var(--pc)}
+.card.p1{--pc:var(--p-food)}.card.p2{--pc:var(--p-move)}.card.p3{--pc:var(--p-rest)}.card.p4{--pc:var(--p-prog)}
+.card .n{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:var(--track-cap);text-transform:uppercase;margin-bottom:6px;color:var(--pc,var(--text-muted))}
+.card h3{margin-bottom:8px}
+.card p{font-size:16px;margin:0;color:var(--text-2)}
+.story-img{border-radius:var(--cut);border:1px solid var(--border);margin:10px 0 18px}
+.quote{font-family:var(--font-display);font-size:21px;font-weight:600;line-height:1.35;background:var(--surface-1);border:1px solid var(--border);
+  border-left:3px solid var(--accent);border-radius:var(--cut);padding:18px 20px;margin:24px 0 0;color:var(--text-1)}
+.previews{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 16px;margin:0 -16px}
+.previews img{height:360px;width:auto;border-radius:var(--cut);border:1px solid var(--border-strong);scroll-snap-align:center;flex:0 0 auto;background:#fff}
+@media(max-width:520px){.previews img{height:300px}}
+.app{display:grid;gap:26px;align-items:center}
+@media(min-width:760px){.app{grid-template-columns:.8fr 1.2fr}}
+.phone{max-width:270px;margin:0 auto;padding:8px;background:var(--surface-1);border:1px solid var(--border-strong);border-radius:var(--cut)}
+.phone img{border-radius:3px}
+.inside{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--cut);overflow:hidden}
+.inside-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px solid var(--border);min-height:52px}
+.inside-row:last-child{border-bottom:none}
+.inside-row b{font-weight:500;color:var(--text-1)}
+.tag{font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:var(--track-cap);text-transform:uppercase;white-space:nowrap;
+  border-radius:var(--cut);padding:3px 8px;border:1px solid currentColor}
+.t1{color:var(--p-food)}.t2{color:var(--p-move)}.t3{color:var(--p-rest)}.t4{color:var(--p-prog)}.t5{color:var(--p-tools)}
+.proof{display:grid;gap:12px}
+@media(min-width:720px){.proof{grid-template-columns:1fr 1fr}}
+
+/* ---------- the offer ---------- */
+#get{background:var(--surface-1)}
+.offer{background:var(--bg);border:1px solid var(--accent);border-radius:var(--cut);padding:28px 20px;text-align:center}
+.offer img{max-width:320px;margin:0 auto 10px;width:100%}
+.offer .price{font-family:var(--font-display);font-size:60px;font-weight:600;line-height:1;margin:10px 0 6px;color:var(--accent)}
+.offer ul{text-align:left;max-width:480px;margin:18px auto}
+.guarantee{display:flex;gap:16px;align-items:flex-start;background:var(--success-soft);border:1px solid rgba(110,231,168,.28);border-radius:var(--cut);
+  padding:18px;margin-top:22px;text-align:left;color:var(--text-2);font-size:16px}
+.guarantee b{color:var(--text-1)}
+.seal{flex:0 0 58px;height:58px;border-radius:var(--cut);border:1px solid var(--success);color:var(--success);display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:15px;text-align:center;line-height:1.05}
+.checkout{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--cut);padding:24px 20px;margin-top:22px;text-align:left}
+.checkout h3{color:var(--text-1)}
+.step{display:flex;gap:14px;margin-bottom:22px}
+.step-n{flex:0 0 34px;height:34px;border-radius:var(--cut);background:var(--accent);color:var(--accent-fg);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center}
+.gcash{background:var(--surface-2);border:1px solid var(--border);color:var(--text-1);border-radius:var(--cut);padding:16px;margin-top:10px}
+.gcash-num{font-family:var(--font-display);font-size:24px;font-weight:600;letter-spacing:.04em}
+.gcash img{max-width:210px;margin:12px auto 0;border-radius:var(--cut);background:#fff}
+.copy{min-height:var(--tap);background:var(--accent-soft);color:var(--accent);border:1px solid rgba(240,179,35,.5);border-radius:var(--cut);padding:4px 12px;
+  font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;margin-left:8px;vertical-align:4px}
+label{display:block;font-size:14px;font-weight:500;color:var(--text-2);margin:14px 0 6px}
+input{width:100%;min-height:var(--tap);padding:10px 12px;border-radius:var(--cut);border:1px solid var(--border);font:inherit;font-size:16px;background:var(--surface-2);color:var(--text-1)}
+input::placeholder{color:var(--text-muted)}
+input:hover{border-color:var(--border-strong)}
+.checkout .cta{max-width:none;margin-top:18px}
+.done{display:none;background:var(--success-soft);border:1px solid rgba(110,231,168,.28);color:var(--text-2);border-radius:var(--cut);padding:18px;margin-top:14px}
+.done b{color:var(--text-1)}
+.err{color:var(--danger);font-size:14px;margin-top:10px;display:none;font-weight:500}
+.soon{text-align:center}
+.soon p{color:var(--text-2)}
+
+/* ---------- questions ---------- */
+details{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--cut);padding:0 18px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600;min-height:54px;padding:14px 30px 14px 0;list-style:none;position:relative;display:flex;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:22px;font-weight:500;color:var(--accent)}
+details[open] summary:after{content:"–"}
+details p{font-size:16px;color:var(--text-2)}
+.final{text-align:center;border-bottom:0}
+.final p{color:var(--text-2)}
+footer{background:var(--surface-1);border-top:1px solid var(--border);color:var(--text-muted);font-size:13px;line-height:1.65;padding:30px 0 96px}
+footer a{color:var(--text-2)}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--surface-1);border-top:1px solid var(--border-strong);padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:50;transform:translateY(110%);transition:transform .25s var(--ease)}
+.sticky.show{transform:none}
+.sticky b{font-family:var(--font-display);font-weight:600;font-size:15px;letter-spacing:.02em}
+.sticky span{display:block;color:var(--text-muted);font-size:12px}
+.sticky .cta{width:auto;min-height:var(--tap);padding:8px 18px;font-size:14px}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in"><div class="brandmark">Every Body Training<span>by Tom Moncupa</span></div><a class="navbuy" href="#get">₱499 · Get it</a></div>
+</header>
+
+<section class="hero">
+  <div class="wrap wide">
+    <div class="hero-grid">
+      <div>
+        <div class="chips"><span class="chip">No injections</span><span class="chip">No pills</span><span class="chip">No gym</span></div>
+        <h1>Lose weight at home in 12 weeks. <span>With rice.</span></h1>
+        <p class="lead">Home Buddy Body is the whole plan, made easy: how much to eat (Filipino food, rice included), 35-minute home workouts with pictures, and a free app that does the counting for you.</p>
+        <div class="price-tag"><b>₱499</b><span>one time · pay with GCash</span></div>
+        <a class="cta" href="#get" onclick="px('InitiateCheckout',{value:499,currency:'PHP'})">Get Home Buddy Body</a>
+        <div class="btn-sub">For beginners. Men and women. Reads easily on your phone.</div>
+      </div>
+      <div class="hero-mock"><img src="assets/product-mockup.png" alt="Home Buddy Body book" width="700" height="660"></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap wide"><div class="tiles">
+  <div class="tile"><b>35</b><span>minutes a workout</span></div><div class="tile"><b>4</b><span>days a week</span></div><div class="tile"><b>₱0</b><span>equipment to buy</span></div><div class="tile"><b>1 cup</b><span>of rice is fine</span></div>
+</div></div></div>
+
+<section>
+  <div class="wrap">
+    <p class="cap">12 weeks from now</p>
+    <h2>Here's what the plan is built for.</h2>
+    <ul class="ticks">
+      <li><b>Weight down, the slow and real way.</b> The plan aims for 0.5 to 1% of your weight a week. At 75 kg, that's 4 to 8 kg in 12 weeks.</li>
+      <li><b>Moving feels easier.</b> Stairs, long mall walks, carrying groceries, keeping up with the kids.</li>
+      <li><b>Better sleep and mood.</b> Studies show regular exercise helps both. Most people feel it before the scale moves.</li>
+      <li><b>You still eat Filipino food.</b> Rice, adobo, Jollibee on a Sunday. You learn how much, not what to give up.</li>
+      <li><b>A routine that survives real life.</b> Birthdays, overtime, rainy season. The plan has a rule for each.</li>
+    </ul>
+    <p class="muted small">These are the targets the plan is built for, not promises. Your results depend on where you start and how often you follow it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="cap">How it works</p>
+    <h2>4 pillars. That's the whole secret.</h2>
+    <div class="cards" style="margin-top:22px">
+      <div class="card pl p1"><div class="n">Pillar 1</div><h3>Food</h3><p>Two numbers: calories and protein. A rice-cup guide for your size. What to order at Mang Inasal, Jollibee and the carinderia.</p></div>
+      <div class="card pl p2"><div class="n">Pillar 2</div><h3>Movement</h3><p>4 home workouts a week, 35 minutes. A chair, a towel and a backpack. Every exercise has an easy and a harder version, with pictures.</p></div>
+      <div class="card pl p3"><div class="n">Pillar 3</div><h3>Recovery</h3><p>Sleep, rest days, sore days and sick days. Your body gets better while you rest, not while you work.</p></div>
+      <div class="card pl p4"><div class="n">Pillar 4</div><h3>Purpose and Progress</h3><p>Know your why. Tick 5 boxes a day. Hit 26 of 32 in a week and you get most of the result. No perfect weeks needed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="app">
+      <div class="phone"><img src="assets/app-today.png" alt="Home Screen app, Today page" width="390" height="844" loading="lazy"></div>
+      <div>
+        <p class="cap">Included free</p>
+        <h2>Home Screen: your plan in your pocket.</h2>
+        <p class="text-2">A simple app that lives on your phone. No account, no password.</p>
+        <ul class="ticks">
+          <li>Your 5 daily boxes, with your week's score out of 32.</li>
+          <li>Today's workout, with pictures and a "Level up!" alert.</li>
+          <li>Your weekly weight worked out for you, with a chart.</li>
+          <li>Your calories, protein and rice per meal, one tap away.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="cap">Where I started</p>
+    <h2>265 lb. Five years of depression. No injections.</h2>
+    <img class="story-img ba" src="assets/tom-initial.jpg" alt="Tom Moncupa, before and after" width="1412" height="641" loading="lazy">
+    <p class="text-2">I was the nerdy kid who lived in the library. Then college, depression, and my body followed my head: 175 lb to 265 lb.</p>
+    <p class="text-2">In 2018 I started over. I lost 50 lb in the first 6 months and kept going. No injections, no secret. Two numbers, four workouts a week, walking, sleep, and a plan for the bad weeks.</p>
+    <p class="text-2">I've coached people with this for years. Home Buddy Body is the same first-month plan I give my clients, made simple enough to run from your sala.</p>
+    <p class="quote">The math is simple. Doing it on a normal, busy week is the hard part. That's what this book is for.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="cap">Look inside</p>
+    <h2>Every page is something you use.</h2>
+    <p class="muted">Swipe.</p>
+  </div>
+  <div class="wrap wide">
+    <div class="previews">
+      <img src="assets/preview-a.jpg" alt="The 4 Pillars page" loading="lazy" width="759" height="1075">
+      <img src="assets/preview-b.jpg" alt="The Filipino plate page" loading="lazy" width="759" height="1075">
+      <img src="assets/preview-c.jpg" alt="Cheap protein page" loading="lazy" width="759" height="1075">
+      <img src="assets/preview-d.jpg" alt="Sample day page" loading="lazy" width="759" height="1075">
+      <img src="assets/preview-e.jpg" alt="12-week plan page" loading="lazy" width="759" height="1075">
+      <img src="assets/preview-f.jpg" alt="How-to exercise page" loading="lazy" width="759" height="1075">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="cap">What's inside</p>
+    <h2>Everything you need. Nothing you don't.</h2>
+    <div class="inside">
+      <div class="inside-row"><b>Your two numbers, and how to get them</b><span class="tag t1">Food</span></div>
+      <div class="inside-row"><b>The Filipino plate and how much rice</b><span class="tag t1">Food</span></div>
+      <div class="inside-row"><b>Cheap protein, with peso prices</b><span class="tag t1">Food</span></div>
+      <div class="inside-row"><b>Eating out, birthdays, inuman, milk tea</b><span class="tag t1">Food</span></div>
+      <div class="inside-row"><b>3 full days of Filipino meals, with rice</b><span class="tag t1">Food</span></div>
+      <div class="inside-row"><b>The 12-week home workout plan</b><span class="tag t2">Movement</span></div>
+      <div class="inside-row"><b>21 how-to cards with pictures</b><span class="tag t2">Movement</span></div>
+      <div class="inside-row"><b>Sleep, rest days, sore days, sick days</b><span class="tag t3">Recovery</span></div>
+      <div class="inside-row"><b>Your why, tracking, and what to do on bad weeks</b><span class="tag t4">Progress</span></div>
+      <div class="inside-row"><b>Printable trackers + the Home Screen app</b><span class="tag t5">Tools</span></div>
+    </div>
+    <div class="cards" style="margin-top:28px">
+      <div class="card"><h3>It's for you if</h3>
+        <ul class="ticks" style="margin:0">
+          <li>You've never worked out, or haven't in years.</li>
+          <li>You don't have a gym, or don't want one.</li>
+          <li>You've tried diets that banned rice and quit after a week.</li>
+          <li>You want to be told exactly what to do.</li>
+        </ul></div>
+      <div class="card"><h3>It's not for you if</h3>
+        <ul class="ticks x" style="margin:0">
+          <li>You want to lose 10 kg in 2 weeks.</li>
+          <li>You want a tea, a pill or a detox.</li>
+          <li>You want someone checking your food every day. That's coaching.</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT PROOF: fill only with results you have written permission to post. Remove "hidden" to show. -->
+<section id="proof" hidden>
+  <div class="wrap">
+    <p class="cap">Real people</p>
+    <h2>Same plan, real results.</h2>
+    <div class="proof">
+      <div class="card"><p><b>[First name], [month year] to [month year]</b></p><p>[Result in numbers.] [One line in their words.]</p></div>
+      <div class="card"><p><b>[First name], [month year] to [month year]</b></p><p>[Result in numbers.] [One line in their words.]</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="get">
+  <div class="wrap">
+    <div class="offer">
+      <img src="assets/product-mockup.png" alt="Home Buddy Body" width="700" height="660" loading="lazy">
+      <p class="cap" style="margin-top:6px">Home Buddy Body · Every Body Training</p>
+      <div class="price">₱499</div>
+      <div class="muted small">One payment. No subscription. Yours to keep.</div>
+      <ul class="ticks">
+        <li>The complete Home Buddy Body book (PDF)</li>
+        <li>The Filipino food guide and 3 days of meals</li>
+        <li>The 12-week home workout plan, 21 how-to cards</li>
+        <li>Home Screen app, all 12 weeks open</li>
+        <li>Printable trackers, and free updates</li>
+        <li>Answers from me: message me on Messenger any time, I reply myself</li>
+      </ul>
+      <div class="guarantee">
+        <div class="seal">21<br>DAY</div>
+        <div><b>The honest guarantee.</b> Follow the plan for 21 days and fill in your tracker. If your weight, your waist and your energy haven't changed at all, send me the tracker and I'll refund your ₱499 by GCash. I ask for the tracker because the plan only fails when it isn't followed.</div>
+      </div>
+
+      <div class="checkout" id="checkout">
+        <div id="soon" class="soon" style="display:none">
+          <h3>Payment opens soon</h3>
+          <p>Start free today. The calculator gives you your calories and protein, and your Home Screen app with weeks 1 to 4.</p>
+          <a class="cta" id="soon-btn" href="#">Get my free numbers</a>
+        </div>
+        <div id="auto-checkout" style="display:none">
+          <h3>Pay with GCash, get it right away</h3>
+          <p class="small text-2">Secure checkout. The book and your app code are emailed as soon as your payment goes through.</p>
+          <a class="cta" id="auto-btn" href="#" onclick="px('InitiateCheckout',{value:499,currency:'PHP'})">Pay ₱499 with GCash</a>
+        </div>
+        <div id="manual-checkout" style="display:none">
+          <h3 style="margin-bottom:18px">Get it in 2 easy steps</h3>
+          <div id="gumroad-box" style="display:none;margin:-4px 0 22px"><a class="cta ghost" id="gumroad-btn" href="#" onclick="px('InitiateCheckout',{value:499,currency:'PHP'})" style="max-width:none">Pay by card or PayPal</a><div class="small muted" id="gumroad-sub" style="margin-top:10px;text-align:center">Instant download. Or pay by GCash or bank QR below.</div></div>
+          <div id="gcash-steps">
+          <div class="step"><div class="step-n">1</div><div style="flex:1"><b>Send ₱499 by GCash or bank QR.</b>
+            <div class="gcash"><div class="small muted">GCash name</div><div id="gname" style="font-weight:600"></div>
+            <div class="small muted" style="margin-top:8px">GCash number</div><div><span class="gcash-num" id="gnum"></span><button class="copy" type="button" onclick="copyNum(this)">Copy</button></div>
+            <img id="gqr" alt="GCash QR code" onerror="this.style.display='none'"></div>
+            <div class="gcash" id="bankbox" style="display:none"><div class="small muted">No GCash? Pay by bank or Maya</div><div id="blabel" style="font-weight:600"></div>
+            <img id="bqr" alt="Bank QR code" onerror="document.getElementById('bankbox').style.display='none'"></div>
+            <div class="small muted" style="margin-top:8px">Your receipt has a reference number. You'll need it in step 2.</div>
+          </div></div>
+          <div class="step" style="margin-bottom:0"><div class="step-n">2</div><div style="flex:1"><b>Tell me where to send it.</b>
+            <form id="paidform" onsubmit="return submitPaid(event)">
+              <label for="pname">First name</label><input id="pname" name="first_name" required autocomplete="given-name">
+              <label for="pemail">Email</label><input id="pemail" name="email_address" type="email" required autocomplete="email" placeholder="Where the book goes">
+              <label for="pref">Reference number from your receipt</label><input id="pref" name="ref" required placeholder="From your GCash or bank receipt">
+              <button class="cta" type="submit" id="paidbtn">Send me Home Buddy Body</button>
+              <div class="err" id="perr">Something went wrong. Screenshot your receipt and message me on Messenger, and I'll send it myself.</div>
+            </form>
+            <div class="done" id="pdone"><b>Got it, <span id="dname"></span>!</b><p style="margin:8px 0 0" id="dpromise"></p><p class="small muted" style="margin:8px 0 0">Check your spam and Promotions folders too. It's from Tom Moncupa.</p></div>
+          </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="cap">Questions</p>
+    <h2>Before you buy.</h2>
+    <details><summary>Do I need Ozempic or Mounjaro to lose weight?</summary><p>No. Most people lose weight by eating a little less than their body uses and moving more. That's what this plan helps you do, with normal Filipino food. If your doctor prescribed one of those medicines, keep following your doctor, and ask them before you change how you eat.</p></details>
+    <details><summary>Do I need equipment?</summary><p>No. A sturdy chair, a thick towel, a door, and a backpack you fill with water bottles or books. A 1-litre bottle weighs 1 kg.</p></details>
+    <details><summary>Can I still eat rice?</summary><p>Yes. You get a rice amount per meal for your size, from 1/2 cup to 1 1/2 cups. Every sample day has rice.</p></details>
+    <details><summary>I've never worked out. Is it too hard?</summary><p>No. Week 1 is sitting down to a chair and push-ups against a table. Everyone starts there. It grows with you.</p></details>
+    <details><summary>I'm a woman. Is this for me?</summary><p>Yes. Same plan. The food numbers have a women's version, and the sample days start at 1,500 calories. It won't make you bulky. Most people notice it first in how their clothes fit.</p></details>
+    <details><summary>I have a lot of weight to lose.</summary><p>This is a good place to start. No running, no jumping. If you have a health condition or take medicine, check with your doctor before changing how you eat.</p></details>
+    <details><summary>How do I get it?</summary><p>Pay ₱499 by GCash or bank QR, then send your email and reference number on this page. The book and your Home Screen app code come by email. Works on any phone.</p></details>
+    <details><summary>What if I get stuck or have a question?</summary><p>Message me on Messenger. I read every message and answer it myself, usually the same day. Your Home Screen app has an "Ask Tom" button too.</p></details>
+    <details><summary>What if it doesn't work for me?</summary><p>Follow it for 21 days and fill in the tracker. If nothing changed at all, send me the tracker and I'll refund you by GCash.</p></details>
+    <details><summary>Is this a subscription?</summary><p>No. You pay ₱499 once.</p></details>
+    <p class="msgr-line" style="margin-top:18px"><b>Another question?</b> <a class="msgr" href="#" style="font-weight:600">Message me on Messenger →</a> I answer every message myself.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>12 weeks will pass anyway.</h2>
+    <p>Start tomorrow, and week 12 comes with results you can see.</p>
+    <a class="cta" href="#get" onclick="px('InitiateCheckout',{value:499,currency:'PHP'})">Get Home Buddy Body · ₱499</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Every Body Training · Tom Moncupa. <a href="https://www.instagram.com/tommoncupa/">Instagram</a> · <a href="https://www.youtube.com/@tom_moncupa">YouTube</a></p>
+    <p>Home Buddy Body is general fitness education for healthy adults, not medical advice. Talk to your doctor before starting if you are pregnant, have a health condition, take medicine, or have an injury. Results depend on where you start and how consistently you follow the plan. Weight-loss rates are the plan's targets, not guarantees. Not for anyone under 18.</p>
+    <p>This site is not part of or endorsed by Facebook or Meta.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><div><b>Home Buddy Body · ₱499</b><span>No injections. No gym. With rice.</span></div><a class="cta" href="#get">Get it</a></div>
+
+<script>
+(function(){
+  var H = window.HB, $ = function(id){ return document.getElementById(id); };
+  var gcashReady = !!(H.GCASH_NUMBER && /\d{4}/.test(H.GCASH_NUMBER) && H.KIT_PAID_FORM_ID);
+  $('gname').textContent = H.GCASH_NAME;
+  $('gnum').textContent = H.GCASH_NUMBER;
+  var q = $('gqr'); if (gcashReady && H.GCASH_QR) q.src = H.GCASH_QR; else q.style.display='none';
+  $('dpromise').textContent = H.DELIVERY_PROMISE;
+  if (H.CHECKOUT_URL) {
+    $('auto-checkout').style.display='block';
+    $('auto-btn').href = H.CHECKOUT_URL;
+  } else if (gcashReady || H.GUMROAD_URL) {
+    $('manual-checkout').style.display='block';
+    if (!gcashReady) { $('gcash-steps').style.display='none'; $('gumroad-sub').textContent='Instant download.'; }
+    if (H.GUMROAD_URL) { $('gumroad-box').style.display='block'; $('gumroad-btn').href=H.GUMROAD_URL; }
+    if (gcashReady && H.BANK_QR) { $('bankbox').style.display='block'; $('bqr').src=H.BANK_QR; $('blabel').textContent=H.BANK_LABEL; }
+  } else {
+    /* payment details not in yet: say so plainly and point to the free start */
+    $('soon').style.display='block';
+    $('soon-btn').href = H.CALC_URL;
+  }
+  document.querySelectorAll('.msgr').forEach(function(a){ a.href = H.MESSENGER_URL; });
+  if (!H.MESSENGER_URL) document.querySelectorAll('.msgr-line').forEach(function(e){ e.style.display='none'; });
+  if (H.SHOW_BEFORE_AFTER === false) document.querySelectorAll('.ba').forEach(function(e){e.style.display='none'});
+  var st = $('sticky'), get = $('get');
+  window.addEventListener('scroll', function(){
+    var r = get.getBoundingClientRect();
+    var inView = r.top < window.innerHeight && r.bottom > 0;
+    st.classList.toggle('show', window.scrollY > 700 && !inView);
+  }, {passive:true});
+})();
+function copyNum(b){
+  var n = window.HB.GCASH_NUMBER.replace(/\s/g,'');
+  try { navigator.clipboard.writeText(n); b.textContent='Copied'; setTimeout(function(){b.textContent='Copy'},1800); } catch(e){}
+}
+function submitPaid(e){
+  e.preventDefault();
+  var H = window.HB, btn = document.getElementById('paidbtn');
+  var name = document.getElementById('pname').value.trim();
+  var email = document.getElementById('pemail').value.trim();
+  var ref = document.getElementById('pref').value.replace(/\s/g,'');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  var fd = new FormData();
+  fd.append('email_address', email);
+  fd.append('fields[first_name]', name);
+  fd.append('fields[gcash_ref]', ref);
+  fd.append('fields[product]', 'Home Buddy Body');
+  function fail(){ btn.disabled=false; btn.textContent='Send me Home Buddy Body'; document.getElementById('perr').style.display='block'; }
+  function ok(){
+    document.getElementById('paidform').style.display='none';
+    document.getElementById('dname').textContent = name;
+    document.getElementById('pdone').style.display='block';
+    px('Purchase',{value:H.PRICE,currency:'PHP',content_name:'Home Buddy Body'});
+  }
+  if (!H.KIT_PAID_FORM_ID) { fail(); console.warn('KIT_PAID_FORM_ID not set'); return false; }
+  fetch(H.KIT_FORM_BASE + H.KIT_PAID_FORM_ID + '/subscriptions', {method:'POST', body:fd, headers:{'Accept':'application/json'}})
+    .then(function(r){ if(!r.ok) throw new Error(r.status); ok(); })
+    .catch(fail);
+  return false;
+}
+</script>
+</body>
+</html>
